@@ -1,4 +1,9 @@
-$(document).ready(function(){
-    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-    $('#modal1').modal();
-});
+/*Variables reutilizables*/
+var $input = $('#icon_prefix');
+
+
+function loadPage() {
+  $('#modal1').modal();
+}
+
+$(document).ready(loadPage);

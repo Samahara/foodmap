@@ -1,8 +1,13 @@
-img,
+div.photo-food > img,
 div.photo-food {
     display: inline-block;
-    height: 20vh;
+    height: 22vh;
     width: 30vw;
+}
+
+img.photo-modal {
+  height: 25vh;
+  width: 60vw;
 }
 
 #food_container {
@@ -13,7 +18,19 @@ div.photo-food {
     min-height: 100vh;
 }
 
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
 .text-foodmap {
     line-height: 100vh;
     margin: 0;
+}
+
+.text-15em {
+  font-size: 1.5em;
 }
