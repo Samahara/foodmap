@@ -1,0 +1,19 @@
+img,
+div.photo-food {
+    display: inline-block;
+    height: 20vh;
+    width: 30vw;
+}
+
+#food_container {
+    min-height: 20vh;
+}
+
+#home {
+    min-height: 100vh;
+}
+
+.text-foodmap {
+    line-height: 100vh;
+    margin: 0;
+}
