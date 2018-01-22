@@ -25,6 +25,7 @@ function selectImg() {
   var $service = $dataRestaurant['service'];
 
   infoModal($name,$adress,$special,$service);
+  restaurantFilter($dataRestaurant);
 }
 
 function infoModal($name,$adress,$special,$service) {
@@ -36,7 +37,7 @@ function infoModal($name,$adress,$special,$service) {
   $especialFood.text($special);
   $adressRestaurant.text($adress);
 
-  if( $service === false) {
+  if($service === false) {
     $serviceButton.hide();
     $service2Button.show();
     $order.hide();
@@ -47,9 +48,11 @@ function infoModal($name,$adress,$special,$service) {
   }
 }
 
-function restaurantFilter() {
-  $input.val().toLowerCase();
-  $foodContainer.empty();
+function restaurantFilter($dataRestaurant) {
+  var $foodType = $dataRestaurant['food'];
+  var $textInput = $input.val().toLowerCase();
+
+  console.log($textInput);
 }
 
 $(document).ready(loadPage);
