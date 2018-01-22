@@ -2,7 +2,7 @@ var data = {
   'El Rinconcito' : {
       'adress' : 'Acueducto #5098, Xochimilco, CDMX',
       'name' : 'El Rinconcito',
-      'food' : 'Mexicana',
+      'food' : 'mexicana',
       'photo' : '../assets/images/tacos.jpg',
       'service' : true,
       'special-food' : 'Tacos',
@@ -10,7 +10,7 @@ var data = {
   'La Chilanguita' : {
       'adress' : 'Halcon #4059, Xochimilco, CDMX',
       'name' : 'La Chilanguita',
-      'food' : 'Mexicana',
+      'food' : 'mexicana',
       'photo' : '../assets/images/pozole.jpg',
       'service' : false,
       'special-food' : 'Pozole',
@@ -18,7 +18,7 @@ var data = {
   'Pedro Navajas' : {
       'adress' : 'Eje central #541, Narvarte Poniente, CDMX',
       'name' : 'Pedro Navajas',
-      'food' : 'Mexicana',
+      'food' : 'mexicana',
       'photo' : '../assets/images/enchiladas.jpg',
       'service' : true,
       'special-food' : 'Enchiladas con rabano',
@@ -26,15 +26,15 @@ var data = {
   'Restaurante Laboratoria' : {
       'adress' : 'Tonalá #30, Roma Norte, CDMX',
       'name' : 'Restaurante Laboratoria',
-      'food' : 'Mexicana',
+      'food' : 'mexicana',
       'photo' : '../assets/images/niñosenvueltos.jpg',
       'service' : false,
       'special-food' : 'Niñas envueltas',
   },
   'Silvana' : {
-      'adress' : 'Tlalpan #4, Lo Volcanes, CDMX',
+      'adress' : 'Tlalpan #4, Los Volcanes, CDMX',
       'name' : 'Silvana',
-      'food' : 'Mexicana',
+      'food' : 'mexicana',
       'photo' : '../assets/images/chilesrellenos.jpg',
       'service' : true,
       'special-food' : 'Chiles Rellenos',
@@ -42,7 +42,7 @@ var data = {
   'Nonsolo' : {
       'adress' : 'Av. Álvaro Obregon #130, Roma Norte, CDMX',
       'name' : 'Nonsolo',
-      'food' : 'Italiana',
+      'food' : 'italiana',
       'photo' : '../assets/images/pasta.jpg',
       'service' : false,
       'special-food' : 'Pasta',
@@ -50,7 +50,7 @@ var data = {
   'Nostra' : {
       'adress' : 'Alberto Santos Dumont #156, Peñón de los Baños, CDMX',
       'name' : 'Nostra',
-      'food' : 'Italiana',
+      'food' : 'italiana',
       'photo' : '../assets/images/risotto.jpg',
       'service' : true,
       'special-food' : 'Risotto',
@@ -58,7 +58,7 @@ var data = {
   'Casa DItalia' : {
       'adress' : 'Agustín Melgar #6, Condesa, CDMX',
       'name' : 'Casa DItalia',
-      'food' : 'Italiana',
+      'food' : 'italiana',
       'photo' : '../assets/images/paella.jpeg',
       'service' : false,
       'special-food' : 'Paella',
@@ -66,7 +66,7 @@ var data = {
   'Ginos' : {
       'adress' : 'Colector #13, Magdalena de las Salinas, CDMX',
       'name' : 'Ginos',
-      'food' : 'Italiana',
+      'food' : 'italiana',
       'photo' : '../assets/images/ravioles.jpg',
       'service' : true,
       'special-food' : 'Ravioles',
@@ -74,15 +74,15 @@ var data = {
   'Piacenzza' : {
       'adress' : 'Motolinia #37, Cuauhtémoc, CDMX',
       'name' : 'Piacenzza',
-      'food' : 'Italiana',
+      'food' : 'italiana',
       'photo' : '../assets/images/pizza.jpg',
-      'service' : false,
+      'service' : true,
       'special-food' : 'Pizza',
   },
   'Tori Tori' : {
       'adress' : 'Temístocles #61, Polanco, CDMX',
       'name' : 'Tori Tori',
-      'food' : 'Japonesa',
+      'food' : 'japonesa',
       'photo' : '../assets/images/sushi.jpg',
       'service' : false,
       'special-food' : 'Sushi',
@@ -90,9 +90,9 @@ var data = {
   'Mikasha Sushi' : {
       'adress' : 'San Luis Potosí #173, Roma Norte, CDMX',
       'name' : 'Mikasha Sushi',
-      'food' : 'Japonesa',
+      'food' : 'japonesa',
       'photo' : '../assets/images/ramen.jpg',
-      'service' : false,
+      'service' : true,
       'special-food' : 'Ramen',
   }
 };

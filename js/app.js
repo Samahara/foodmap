@@ -6,10 +6,13 @@ var $adressRestaurant = $('.adressRestaurant');
 var $serviceButton = $('.service');
 var $imageFood = $('.food-photo');
 var $order = $('.buttonOrder');
+var $service2Button = $('.service2');
+var $foodContainer = $('#food_container');
 
 function loadPage() {
   $('#modal1').modal();
   $imageFood.click(selectImg);
+  $input.keyup(restaurantFilter);
 }
 
 function selectImg() {
@@ -33,6 +36,20 @@ function infoModal($name,$adress,$special,$service) {
   $especialFood.text($special);
   $adressRestaurant.text($adress);
 
+  if( $service === false) {
+    $serviceButton.hide();
+    $service2Button.show();
+    $order.hide();
+  } else {
+    $serviceButton.show();
+    $service2Button.hide();
+    $order.show();
+  }
+}
+
+function restaurantFilter() {
+  $input.val().toLowerCase();
+  $foodContainer.empty();
 }
 
 $(document).ready(loadPage);
