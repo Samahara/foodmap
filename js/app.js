@@ -52,7 +52,19 @@ function restaurantFilter($dataRestaurant) {
   var $foodType = $dataRestaurant['food'];
   var $textInput = $input.val().toLowerCase();
 
-  console.log($textInput);
+  if($($input).val().trim().length > 0) {
+    var filteredRestaurants = $dataRestaurant.filter(function($foodType) {
+       console.log($foodType.toLowerCase().indexOf($textInput) >= 0) 
+    });
+    filteredRestaurants.forEach(function($foodType){
+
+    });
+  } else {
+    filteredRestaurants.forEach(function($foodType){
+
+    });
+  }
+
 }
 
 $(document).ready(loadPage);
