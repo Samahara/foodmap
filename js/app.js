@@ -3,8 +3,7 @@
 function loadPage() {
   $('#modal1').modal();
   paintRestaurants(restaurants);
-  /*$imageFood.click(selectImg);
-  $input.keyup(restaurantFilter);*/
+  /*$input.keyup(restaurantFilter);*/
 }
 
 function paintRestaurants(array) {
@@ -31,29 +30,28 @@ function paintRestaurants(array) {
 
 }
 
-
-
-/*
 function selectImg() {
-  var $restaurant = event.target.dataset.name;
-  var $dataRestaurant = data[$restaurant];
+    var $name = $(this).data('name');
+    var $adress = $(this).data('adress');
+    var $special = $(this).data('special-food');
+    var $service = $(this).data('service');
 
-  var $name = $dataRestaurant['name'];
-  var $adress = $dataRestaurant['adress'];
-  var $special = $dataRestaurant['special-food'];
-  var $service = $dataRestaurant['service'];
-
-  infoModal($name,$adress,$special,$service);
-  restaurantFilter($dataRestaurant);
+  infoModal($name, $adress, $special, $service);
+  // restaurantFilter($dataRestaurant);
 }
-function infoModal($name,$adress,$special,$service) {
-  $restaurantName.text("");
-  $especialFood.text("");
-  $adressRestaurant.text("");
 
-  $restaurantName.text($name);
-  $especialFood.text($special);
-  $adressRestaurant.text($adress);
+function infoModal($name, $adress, $special, $service) {
+  $('.restaurantName').text("");
+  $('.specialFood').text("");
+  $('.adressRestaurant').text("");
+
+  $('.restaurantName').text($name);
+  $('.specialFood').text($special);
+  $('.adressRestaurant').text($adress);
+
+  var $serviceButton = $('.service');
+  var $service2Button = $('.service2');
+  var $order = $('.buttonOrder')
 
   if($service === false) {
     $serviceButton.hide();
@@ -65,7 +63,8 @@ function infoModal($name,$adress,$special,$service) {
     $order.show();
   }
 }
-function restaurantFilter($dataRestaurant) {
+
+/*function restaurantFilter($dataRestaurant) {
   var $foodType = $dataRestaurant['food'];
   var $textInput = $input.val().toLowerCase();
 
@@ -85,5 +84,5 @@ function restaurantFilter($dataRestaurant) {
 }
 */
 
-
+$(document).on('click', '.photo-food img', selectImg);
 $(document).ready(loadPage);

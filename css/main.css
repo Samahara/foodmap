@@ -2,7 +2,8 @@ div.photo-food > img,
 div.photo-food {
   display: inline-block;
   height: 22vh;
-  width: 30vw;
+  margin: .2vh 1vw;
+  width: 25vw;
 }
 
 img.photo-modal {
