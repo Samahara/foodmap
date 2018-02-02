@@ -1,9 +1,9 @@
-
+var $input = $('#icon_prefix');
 
 function loadPage() {
   $('#modal1').modal();
   paintRestaurants(restaurants);
-  /*$input.keyup(restaurantFilter);*/
+  $input.keyup(restaurantFilter);
 }
 
 function paintRestaurants(array) {
@@ -31,20 +31,25 @@ function paintRestaurants(array) {
 }
 
 function selectImg() {
-    var $name = $(this).data('name');
-    var $adress = $(this).data('adress');
-    var $special = $(this).data('special-food');
-    var $service = $(this).data('service');
 
+  // Llamando a la data con jQuery
+  var $name = $(this).data('name');
+  var $adress = $(this).data('adress');
+  var $special = $(this).data('special-food');
+  var $service = $(this).data('service');
+
+  // Pasandole a la siguiente función la data para mintarla en el modal
   infoModal($name, $adress, $special, $service);
-  // restaurantFilter($dataRestaurant);
 }
 
 function infoModal($name, $adress, $special, $service) {
+  
+  // Limpiando el texto del modal
   $('.restaurantName').text("");
   $('.specialFood').text("");
   $('.adressRestaurant').text("");
 
+  // Agregando la información de cada restaurante
   $('.restaurantName').text($name);
   $('.specialFood').text($special);
   $('.adressRestaurant').text($adress);
@@ -64,25 +69,23 @@ function infoModal($name, $adress, $special, $service) {
   }
 }
 
-/*function restaurantFilter($dataRestaurant) {
-  var $foodType = $dataRestaurant['food'];
-  var $textInput = $input.val().toLowerCase();
+function restaurantFilter($dataRestaurant) {
 
-  if($($input).val().trim().length > 0) {
-    var filteredRestaurants = $dataRestaurant.filter(function($foodType) {
-       console.log($foodType.toLowerCase().indexOf($textInput) >= 0)
+  if($input.val().trim().length > 0) {
+    var textInput = $input.val().toLowerCase();
+    var filteredRestaurants = restaurants.filter(function(restaurants) {
+       return restaurants.food.toLowerCase().indexOf(textInput) >= 0;
     });
-    filteredRestaurants.forEach(function($foodType){
 
-    });
+    paintRestaurants(filteredRestaurants);
+
   } else {
-    filteredRestaurants.forEach(function($foodType){
 
-    });
+    $('#main_food_container').empty();
+		paintRestaurants(restaurants);
   }
 
 }
-*/
 
 $(document).on('click', '.photo-food img', selectImg);
 $(document).ready(loadPage);
