@@ -1,20 +1,39 @@
-/*Variables reutilizables*/
-var $input = $('#icon_prefix');
-var $restaurantName = $('.restaurantName');
-var $especialFood = $('.especialFood');
-var $adressRestaurant = $('.adressRestaurant');
-var $serviceButton = $('.service');
-var $imageFood = $('.food-photo');
-var $order = $('.buttonOrder');
-var $service2Button = $('.service2');
-var $foodContainer = $('#food_container');
+
 
 function loadPage() {
   $('#modal1').modal();
-  $imageFood.click(selectImg);
-  $input.keyup(restaurantFilter);
+  paintRestaurants(restaurants);
+  /*$imageFood.click(selectImg);
+  $input.keyup(restaurantFilter);*/
 }
 
+function paintRestaurants(array) {
+  /* Plantilla html */
+  var template = '<div class="photo-food">' +
+                    '<img src="__src__" class="modal-trigger food-photo" data-src="__src__" data-name="__name__" data-adress="__adress__" data-food="__food__" data-special-food="__special-food__" data-service="__service__" href="#modal1" alt="Photo food">' +
+                  '</div>';
+
+  var finalTemplate = "";
+  /* Dando atributos a los elementos */
+  array.forEach(function(restaurants) {
+    var $imageFood = $('<img />');
+    $imageFood.attr('src', restaurants['photo']);
+
+    finalTemplate += template.replace("__src__", restaurants.photo)
+                             .replace("__name__", restaurants.name)
+                             .replace("__adress__", restaurants.adress)
+                             .replace("__food__", restaurants.food)
+                             .replace("__service__", restaurants.service)
+                             .replace("__special-food__", restaurants['special-food']);
+  });
+
+  $('#main_food_container').html(finalTemplate);
+
+}
+
+
+
+/*
 function selectImg() {
   var $restaurant = event.target.dataset.name;
   var $dataRestaurant = data[$restaurant];
@@ -27,7 +46,6 @@ function selectImg() {
   infoModal($name,$adress,$special,$service);
   restaurantFilter($dataRestaurant);
 }
-
 function infoModal($name,$adress,$special,$service) {
   $restaurantName.text("");
   $especialFood.text("");
@@ -47,14 +65,13 @@ function infoModal($name,$adress,$special,$service) {
     $order.show();
   }
 }
-
 function restaurantFilter($dataRestaurant) {
   var $foodType = $dataRestaurant['food'];
   var $textInput = $input.val().toLowerCase();
 
   if($($input).val().trim().length > 0) {
     var filteredRestaurants = $dataRestaurant.filter(function($foodType) {
-       console.log($foodType.toLowerCase().indexOf($textInput) >= 0) 
+       console.log($foodType.toLowerCase().indexOf($textInput) >= 0)
     });
     filteredRestaurants.forEach(function($foodType){
 
@@ -66,5 +83,7 @@ function restaurantFilter($dataRestaurant) {
   }
 
 }
+*/
+
 
 $(document).ready(loadPage);
