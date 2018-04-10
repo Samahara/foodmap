@@ -1,6 +1,10 @@
 # Foodmap
 
-## Objetivo
+Foodmap es una aplicación para encontrar información sobre restaurantes. 
+
+![Foodmap](https://user-images.githubusercontent.com/32861693/38539880-859b7994-3c5f-11e8-90d6-e1e5e8ab41bf.png)
+
+Objetivo
 
 1. Vista splash con duración de 2 a 5 segundos.
 ![Vista splash](assets/images/splash.jpg)
@@ -17,3 +21,5 @@ En esta ocasión lo haremos por tipo de comida y servicio a domicilio.
 
 5. Una vez cerrado ese modal debe volver a la vista principal.
 ![Página principal](assets/images/2.jpg)
+
+## Elaborado para [Laboratoria](http://www.laboratoria.la/)
